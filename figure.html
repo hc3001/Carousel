@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <script src=base.js></script>
+        <style>
+            .hc-slide {
+                position: relative;
+            }
+            .hc-slide-image {
+                display: none;
+            }
+            .hc-active {
+                display: inline-block;;
+            }
+            .hc-slide-button {
+                opacity: 0.6;
+                height: 50px;
+            }
+            .hc-left {
+                left: 0;
+            }
+            .hc-right {
+                right: 0;
+            }
+            .hc-vertical-center {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            .hc-slide-indicators {
+                position: absolute;
+                bottom: 10px;
+            }
+            .hc-slide-indi-bg {
+                background: white;
+                opacity: 0.3;
+                width: 100%;
+                height: 100%;
+            }
+            .hc-slide-indi {
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: red;
+            }
+            .hc-white {
+                background: white;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- 轮播图 -->
+        <div class="hc-3">
+            <!-- data-imgs 是图片的总数 -->
+            <!-- data-active 是当前显示的图片的下标 -->
+            <div class="hc-slide" data-imgs=3 data-active=0>
+                <img id=id-hcimage-0 class="hc-slide-image hc-active" src="pic/1.jpg" alt="">
+                <img id=id-hcimage-1 class=hc-slide-image src="pic/2.jpg" alt="">
+                <img id=id-hcimage-2 class=hc-slide-image src="pic/3.jpg" alt="">
+                <button class="hc-slide-button hc-left hc-vertical-center" data-next="-1"><</button>
+                <button class="hc-slide-button hc-right hc-vertical-center" data-next="1">></button>
+                <div class="hc-slide-indicators">
+                    <div id=id-indi-0 class="hc-slide-indi hc-white"></div>
+                    <div id=id-indi-1 class="hc-slide-indi"></div>
+                    <div id=id-indi-2 class="hc-slide-indi"></div>
+                </div>
+            </div>
+        </div>
+        <script src=side.js></script>
+    </body>
+</html>
