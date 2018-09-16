@@ -5,6 +5,7 @@ var log = function() {
 
 var e = function(selector) {
     return document.querySelector(selector)
+    console.log("test2")
 }
 
 var appendHtml = function(element, html) {
