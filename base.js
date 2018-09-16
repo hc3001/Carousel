@@ -1,6 +1,6 @@
 var log = function() {
     console.log.apply(console, arguments)
-	console.log("test1")
+	console.log("test122")
 }
 
 var e = function(selector) {
